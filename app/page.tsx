@@ -6,6 +6,7 @@ export default function Home() {
     { href: "/forecast", title: "Demand Forecast", desc: "Per-market quarterly forecasts for AU & UK" },
     { href: "/container", title: "Container Optimiser", desc: "Fill 20ft containers to 95%+ capacity" },
     { href: "/production", title: "Production Split", desc: "Allocate production runs between AU and UK" },
+    { href: "/charts", title: "Charts", desc: "Visualise forecast, demand trends, and container fill" },
   ];
 
   return (

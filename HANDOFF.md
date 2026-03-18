@@ -1,16 +1,16 @@
 # Forecast Planner — Handoff Notes
 
 ## Last Completed Task
-**Task 5: Production Split** ✅
+**Task 6: Charts + Visualisation** ✅
 
-- `app/production/ProductionClient.tsx` — total run split by AU/UK demand proportions
-- Configurable buffer % (default 5%)
-- Per-SKU: AU demand, UK demand, total production run (editable), buffer, AU/UK allocations
-- Shows container fractions for each market — flags rows where split doesn't fill containers evenly
-- Summary cards: total, AU, UK, buffer totals
+- `app/charts/ChartsClient.tsx` — three Recharts charts:
+  - Bar chart: quarterly forecast by SKU, AU vs UK side-by-side
+  - Line chart: projected monthly demand over 12 months per SKU (compound growth)
+  - Pie chart: container fill by product in CBM (with empty space shown)
+- Added Charts to nav and homepage
 
 ## Next Task
-**Task 6: Charts + Visualisation** — Recharts bar/line/pie charts
+**Task 7: Export** — ExcelJS + jsPDF for Excel and PDF export
 
 ## Status
 - [x] Task 1: Scaffold + Data Models
@@ -18,6 +18,7 @@
 - [x] Task 3: Demand Forecast
 - [x] Task 4: Container Optimiser
 - [x] Task 5: Production Split
+- [x] Task 6: Charts + Visualisation
 - [ ] Task 3: Demand Forecast
 - [ ] Task 4: Container Optimiser
 - [ ] Task 5: Production Split
