@@ -28,6 +28,7 @@ export default function RootLayout({
           <Link href="/container" className="text-sm text-gray-600 hover:text-blue-600">Container</Link>
           <Link href="/production" className="text-sm text-gray-600 hover:text-blue-600">Production Split</Link>
           <Link href="/charts" className="text-sm text-gray-600 hover:text-blue-600">Charts</Link>
+          <Link href="/export" className="text-sm text-gray-600 hover:text-blue-600">Export</Link>
         </nav>
         <main className="max-w-7xl mx-auto px-6 py-8">
           {children}

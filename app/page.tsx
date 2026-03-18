@@ -7,6 +7,7 @@ export default function Home() {
     { href: "/container", title: "Container Optimiser", desc: "Fill 20ft containers to 95%+ capacity" },
     { href: "/production", title: "Production Split", desc: "Allocate production runs between AU and UK" },
     { href: "/charts", title: "Charts", desc: "Visualise forecast, demand trends, and container fill" },
+    { href: "/export", title: "Export", desc: "Download Excel or PDF reports for AU, UK, and container plan" },
   ];
 
   return (
