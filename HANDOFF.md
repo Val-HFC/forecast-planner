@@ -1,22 +1,21 @@
 # Forecast Planner — Handoff Notes
 
 ## Last Completed Task
-**Task 1: Scaffold + Data Models** ✅
+**Task 2: Product Input UI** ✅
 
-- Next.js 14 app scaffolded with TypeScript, Tailwind, App Router
-- TypeScript types defined in `app/types/index.ts`:
-  - `Product` — SKU dimensions, weight, carton info
-  - `MarketForecast` — per-market demand inputs + calculated qty
-  - `ContainerPlan` — container loading summary
-  - `ProductionSplit` — AU/UK allocation breakdown
-- Container constants: 33 CBM, 28,000 kg, 95% fill target
+- `app/products/ProductsClient.tsx` — full data entry table for SKUs
+- Auto-calculates CBM per carton from L×W×H dimensions
+- CSV import (multi-row, appends to existing) and CSV export
+- localStorage persistence across sessions
+- Inline edit and delete for each product row
+- Homepage updated with navigation cards; layout has top nav
 
 ## Next Task
-**Task 2: Product Input UI** — `app/products/page.tsx` data entry table, CBM auto-calc, CSV import/export
+**Task 3: Demand Forecast** — `app/forecast/page.tsx` per-market AU/UK forecast with side-by-side view
 
 ## Status
 - [x] Task 1: Scaffold + Data Models
-- [ ] Task 2: Product Input UI
+- [x] Task 2: Product Input UI
 - [ ] Task 3: Demand Forecast
 - [ ] Task 4: Container Optimiser
 - [ ] Task 5: Production Split
