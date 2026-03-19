@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   description: "AU + UK Production Forecasting & Container Optimisation",
 };
 
+const navItems = [
+  { href: "/products", label: "Products" },
+  { href: "/forecast", label: "Forecast" },
+  { href: "/container", label: "Container" },
+  { href: "/production", label: "Production" },
+  { href: "/charts", label: "Charts" },
+  { href: "/export", label: "Export" },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,19 +29,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased bg-gray-50 text-gray-900`}>
-        <nav className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-6">
-          <Link href="/" className="font-bold text-lg text-blue-700">Forecast Planner</Link>
-          <Link href="/products" className="text-sm text-gray-600 hover:text-blue-600">Products</Link>
-          <Link href="/forecast" className="text-sm text-gray-600 hover:text-blue-600">Forecast</Link>
-          <Link href="/container" className="text-sm text-gray-600 hover:text-blue-600">Container</Link>
-          <Link href="/production" className="text-sm text-gray-600 hover:text-blue-600">Production Split</Link>
-          <Link href="/charts" className="text-sm text-gray-600 hover:text-blue-600">Charts</Link>
-          <Link href="/export" className="text-sm text-gray-600 hover:text-blue-600">Export</Link>
+      <body className={`${geistSans.variable} antialiased bg-[#f5f5f7] text-gray-900`}>
+        <nav className="bg-white/80 backdrop-blur-xl border-b border-gray-200/60 px-6 py-3 flex items-center gap-8 sticky top-0 z-50">
+          <Link href="/" className="font-bold text-lg tracking-tight text-gray-900">
+            Forecast Planner
+          </Link>
+          <div className="flex items-center gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-lg px-3 py-1.5 transition-colors font-medium"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </nav>
-        <main className="max-w-7xl mx-auto px-6 py-8">
-          {children}
-        </main>
+        <main className="max-w-7xl mx-auto px-6 py-8">{children}</main>
       </body>
     </html>
   );
